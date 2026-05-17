@@ -1,32 +1,77 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# ==========================================
+# 環境変数・機密情報
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# ==========================================
+# IDE・エディタ
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# ==========================================
+# OS
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Go
+# ==========================================
+# バイナリ・コンパイル成果物
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# テストバイナリ・カバレッジ
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
-*.coverprofile
-profile.cov
+coverage.html
+coverage.txt
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-# Go workspace file
+# Goのワークスペース
 go.work
 go.work.sum
 
-# env file
-.env
+# vendor
+# vendor/
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# ==========================================
+# ログ
+# ==========================================
+*.log
+log/private/
+
+# ==========================================
+# 一時ファイル
+# ==========================================
+tmp/
+temp/
+.cache/
+
+# ==========================================
+# データベース・データファイル
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# ==========================================
+# Zenn CLI
+# ==========================================
+node_modules/
+package-lock.json
